@@ -116,6 +116,25 @@ iframe {
   box-shadow: 0 12px 25px rgba(114, 137, 218, 0.6);
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 <body>
@@ -127,6 +146,7 @@ iframe {
       <a href="#plan">Plán streamov</a>
       <a href="#klipy">Klipy</a>
       <a href="#hry">Hry</a>
+      <a href="#galeria">Galéria</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>  <section id="o-mne" data-aos="fade-up">
@@ -163,6 +183,13 @@ iframe {
       <li>Hogwarts Legacy</li>
       <li>No Man's Sky</li>
     </ul>
+  </section>  <section id="galeria" data-aos="fade-up">
+    <h2>Galéria momentov</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/200x120?text=Moment+1" alt="Moment 1">
+      <img src="https://via.placeholder.com/200x120?text=Moment+2" alt="Moment 2">
+      <img src="https://via.placeholder.com/200x120?text=Moment+3" alt="Moment 3">
+    </div>
   </section>  <section id="kontakt" data-aos="fade-up">
     <h2>Kontakt</h2>
     <p>Napíš mi na: <a href="mailto:streamer@xiu.sk">streamer@xiu.sk</a></p>
