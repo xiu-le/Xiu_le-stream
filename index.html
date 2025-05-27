@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="sk">
+<!DOCTYPE html><html lang="sk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,85 +10,112 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
+    }html, body {
+  font-family: Arial, sans-serif;
+  color: #eee;
+  background: linear-gradient(135deg, #ff6f00, #005aff);
+  overflow-x: hidden;
+}
 
-    html, body {
-      font-family: Arial, sans-serif;
-      color: #eee;
-      background: linear-gradient(135deg, #ff6f00, #005aff);
-      overflow-x: hidden;
-    }
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
+nav a {
+  color: #00ffc3;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    nav a {
-      color: #00ffc3;
-      text-decoration: none;
-      font-weight: bold;
-    }
+section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
 
-    section {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
+section h2 {
+  margin-bottom: 1rem;
+}
 
-    section h2 {
-      margin-bottom: 1rem;
-    }
+.twitch-section {
+  text-align: center;
+}
 
-    .twitch-section {
-      text-align: center;
-    }
+.twitch-button {
+  background: #8f2eff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    .twitch-button {
-      background: #8f2eff;
-      color: #fff;
-      padding: 1rem 2rem;
-      border-radius: 40px;
-      border: none;
-      font-size: 1.2rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+.twitch-button:hover {
+  background: #a44bff;
+}
 
-    .twitch-button:hover {
-      background: #a44bff;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
 
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.5rem;
-      text-align: center;
-    }
+iframe {
+  max-width: 100%;
+  display: block;
+  margin: 1rem auto;
+}
 
-    iframe {
-      max-width: 100%;
-      display: block;
-      margin: 1rem auto;
-    }
+#discord {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 40px 10px;
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+.discord-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #7289da, #99aab5);
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(114, 137, 218, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discord-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(114, 137, 218, 0.6);
+}
+
   </style>
 </head>
 <body>
@@ -103,27 +129,19 @@
       <a href="#hry">Hry</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-  </header>
-
-  <section id="o-mne" data-aos="fade-up">
+  </header>  <section id="o-mne" data-aos="fade-up">
     <h2>O mne</h2>
     <p>Volam sa Andrej a na Internete ma poznáte ako Xiu_Le, som streamer a fanúšik Apex Legends, varenia a techniky!</p>
-  </section>
-
-  <section class="twitch-section" data-aos="zoom-in">
+  </section>  <section class="twitch-section" data-aos="zoom-in">
     <h2>Sleduj ma na Twitchi</h2>
     <a href="https://www.twitch.tv/xiu_le" target="_blank">
       <button class="twitch-button">Sleduj ma na Twitchi</button>
     </a>
-  </section>
-
-  <section id="stream" data-aos="fade-up">
+  </section>  <section id="stream" data-aos="fade-up">
     <h2>Live Stream</h2>
     <iframe src="https://player.twitch.tv/?channel=xiu_le&parent=xiu-le.github.io" height="300" width="100%" allowfullscreen></iframe>
     <iframe src="https://www.twitch.tv/embed/xiu_le/chat?parent=xiu-le.github.io" height="300" width="100%"></iframe>
-  </section>
-
-  <section id="plan" data-aos="fade-up">
+  </section>  <section id="plan" data-aos="fade-up">
     <h2>Plán streamov</h2>
     <table>
       <tr><th>Deň</th><th>Hra</th><th>Čas</th></tr>
@@ -131,17 +149,13 @@
       <tr><td>Streda</td><td>Horror Night</td><td>20:00 - 22:00</td></tr>
       <tr><td>Nedeľa</td><td>Just Chatting</td><td>17:00 - 19:00</td></tr>
     </table>
-  </section>
-
-  <section id="klipy" data-aos="fade-up">
+  </section>  <section id="klipy" data-aos="fade-up">
     <h2>Najlepšie klipy</h2>
     <p>1. Clutch s Wattson</p>
     <iframe width="360" height="315" src="https://www.youtube.com/embed/cBmJ9Tsr7j8" allowfullscreen></iframe>
     <p>2. Ultimátny moment v zápale boja</p>
     <iframe width="360" height="315" src="https://www.youtube.com/embed/2LKunJDQB3A" allowfullscreen></iframe>
-  </section>
-
-  <section id="hry" data-aos="fade-up">
+  </section>  <section id="hry" data-aos="fade-up">
     <h2>Obľúbené hry</h2>
     <ul>
       <li>Apex Legends</li>
@@ -149,16 +163,14 @@
       <li>Hogwarts Legacy</li>
       <li>No Man's Sky</li>
     </ul>
-  </section>
-
-  <section id="kontakt" data-aos="fade-up">
+  </section>  <section id="kontakt" data-aos="fade-up">
     <h2>Kontakt</h2>
     <p>Napíš mi na: <a href="mailto:streamer@xiu.sk">streamer@xiu.sk</a></p>
-  </section>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+  </section>  <section id="discord" data-aos="zoom-in">
+    <h2>Pripoj sa na môj Discord!</h2>
+    <p>Staň sa súčasťou mojej hernej a streamerskej komunity. Diskusie, oznámenia, zábava – všetko na jednom mieste!</p>
+    <a href="https://discord.gg/EaPeWGC4" class="discord-btn">Pridaj sa</a>
+  </section>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
     AOS.init();
-  </script>
-</body>
+  </script></body>
 </html>
