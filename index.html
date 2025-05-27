@@ -18,8 +18,14 @@
 }
 
 header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
   text-align: center;
-  padding: 2rem 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -149,55 +155,4 @@ iframe {
       <a href="#galeria">Galéria</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-  </header>  <section id="o-mne" data-aos="fade-up">
-    <h2>O mne</h2>
-    <p>Volam sa Andrej a na Internete ma poznáte ako Xiu_Le, som streamer a fanúšik Apex Legends, varenia a techniky!</p>
-  </section>  <section class="twitch-section" data-aos="zoom-in">
-    <h2>Sleduj ma na Twitchi</h2>
-    <a href="https://www.twitch.tv/xiu_le" target="_blank">
-      <button class="twitch-button">Sleduj ma na Twitchi</button>
-    </a>
-  </section>  <section id="stream" data-aos="fade-up">
-    <h2>Live Stream</h2>
-    <iframe src="https://player.twitch.tv/?channel=xiu_le&parent=xiu-le.github.io" height="300" width="100%" allowfullscreen></iframe>
-    <iframe src="https://www.twitch.tv/embed/xiu_le/chat?parent=xiu-le.github.io" height="300" width="100%"></iframe>
-  </section>  <section id="plan" data-aos="fade-up">
-    <h2>Plán streamov</h2>
-    <table>
-      <tr><th>Deň</th><th>Hra</th><th>Čas</th></tr>
-      <tr><td>Pondelok</td><td>Apex Legends</td><td>18:00 - 21:00</td></tr>
-      <tr><td>Streda</td><td>Horror Night</td><td>20:00 - 22:00</td></tr>
-      <tr><td>Nedeľa</td><td>Just Chatting</td><td>17:00 - 19:00</td></tr>
-    </table>
-  </section>  <section id="klipy" data-aos="fade-up">
-    <h2>Najlepšie klipy</h2>
-    <p>1. Clutch s Wattson</p>
-    <iframe width="360" height="315" src="https://www.youtube.com/embed/cBmJ9Tsr7j8" allowfullscreen></iframe>
-    <p>2. Ultimátny moment v zápale boja</p>
-    <iframe width="360" height="315" src="https://www.youtube.com/embed/2LKunJDQB3A" allowfullscreen></iframe>
-  </section>  <section id="hry" data-aos="fade-up">
-    <h2>Obľúbené hry</h2>
-    <ul>
-      <li>Apex Legends</li>
-      <li>The Last of Us</li>
-      <li>Hogwarts Legacy</li>
-      <li>No Man's Sky</li>
-    </ul>
-  </section>  <section id="galeria" data-aos="fade-up">
-    <h2>Galéria momentov</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/200x120?text=Moment+1" alt="Moment 1">
-      <img src="https://via.placeholder.com/200x120?text=Moment+2" alt="Moment 2">
-      <img src="https://via.placeholder.com/200x120?text=Moment+3" alt="Moment 3">
-    </div>
-  </section>  <section id="kontakt" data-aos="fade-up">
-    <h2>Kontakt</h2>
-    <p>Napíš mi na: <a href="mailto:streamer@xiu.sk">streamer@xiu.sk</a></p>
-  </section>  <section id="discord" data-aos="zoom-in">
-    <h2>Pripoj sa na môj Discord!</h2>
-    <p>Staň sa súčasťou mojej hernej a streamerskej komunity. Diskusie, oznámenia, zábava – všetko na jednom mieste!</p>
-    <a href="https://discord.gg/EaPeWGC4" class="discord-btn">Pridaj sa</a>
-  </section>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
-    AOS.init();
-  </script></body>
-</html>
+  </header>
