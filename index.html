@@ -1,161 +1,107 @@
-
-<!DOCTYPE html>
-<html lang="sk">
+<!DOCTYPE html><html lang="sk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Xiu_Le - Live Stream</title>
-
-  <!-- AOS animácie -->
+  <title>Xiu_Le - Livestream</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      background: linear-gradient(135deg, #ff6f00, #005aff);
-      color: #eee;
-      position: relative;
-      overflow-x: hidden;
-    }
+      padding: 0;
+      box-sizing: border-box;
+    }html, body {
+  font-family: Arial, sans-serif;
+  color: #eee;
+  background: linear-gradient(135deg, #ff6f00, #005aff);
+  overflow-x: hidden;
+}
 
-    body::before {
-      content: "";
-      position: absolute;
-      top: -100px;
-      left: -100px;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle at 30% 30%, #00ffff55 0%, transparent 70%),
-                  radial-gradient(circle at 70% 60%, #ff990055 0%, transparent 70%);
-      filter: blur(100px);
-      z-index: 0;
-      pointer-events: none;
-    }
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1em;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
-    nav a {
-      color: #00ffcc;
-      margin: 0 1em;
-      text-decoration: none;
-    }
+nav a {
+  color: #00ffc3;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
 
-    section {
-      padding: 2em 0;
-      position: relative;
-      z-index: 1;
-    }
+section h2 {
+  margin-bottom: 1rem;
+}
 
-    iframe {
-      border: 3px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-      border-radius: 12px;
-      width: 100%;
-      margin-bottom: 2em;
-    }
+.twitch-section {
+  text-align: center;
+}
 
-    .twitch-button {
-      display: inline-block;
-      background: #9146FF;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-size: 1.2em;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.2s;
-      box-shadow: 0 0 20px rgba(145, 70, 255, 0.4);
-    }
+.twitch-button {
+  background: #8f2eff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    .twitch-button:hover {
-      background: #772ce8;
-      transform: scale(1.05);
-    }
+.twitch-button:hover {
+  background: #a44bff;
+}
 
-    .twitch-button .icon {
-      margin-right: 10px;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
 
-    footer {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #ccc;
-      text-align: center;
-      padding: 1em;
-      z-index: 1;
-      position: relative;
-    }
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+iframe {
+  max-width: 100%;
+  display: block;
+  margin: 1rem auto;
+}
 
-    th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      text-align: center;
-    }
-
-    ul {
-      padding-left: 1.5em;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 0.5em 0;
-      }
-
-      .twitch-button {
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 1em;
-      }
-    }
   </style>
 </head>
 <body>
   <header data-aos="fade-down">
-    <div class="container">
-      <h1>Vitaj na mojom streame!</h1>
-      <nav>
-        <a href="#o-mne">O mne</a>
-        <a href="#stream">Stream</a>
-        <a href="#plan">Plán streamov</a>
-        <a href="#klipy">Klipy</a>
-        <a href="#hry">Hry</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+    <h1>Vitaj na mojom streame!</h1>
+    <nav>
+      <a href="#o-mne">O mne</a>
+      <a href="#stream">Stream</a>
+      <a href="#plan">Plán streamov</a>
+      <a href="#klipy">Klipy</a>
+      <a href="#hry">Hry</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header
 
   <section id="o-mne" data-aos="fade-up">
     <div class="container">
