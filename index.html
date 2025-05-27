@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiu_Le - Stream</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4c/Lightning_bolt_font_awesome.svg">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #2c003e, #00063e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    nav a {
+      color: #2fffb3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+    .btn-twitch {
+      background: #9146FF;
+      padding: 12px 25px;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin: 10px auto 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    iframe {
+      max-width: 100%;
+      border: none;
+      border-radius: 10px;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 600px;
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 10px;
+    }
+    .gallery img {
+      width: 100px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .discord-box {
+      background: rgba(0,0,0,0.2);
+      margin: 30px auto;
+      max-width: 500px;
+      padding: 25px;
+      border-radius: 15px;
+    }
+    .discord-box a {
+      background: #5865F2;
+      padding: 12px 25px;
+      border-radius: 25px;
+      display: inline-block;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 15px;
+    }
+    .news-card {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 1rem auto;
+      text-align: left;
+    }
+    .news-card h3 {
+      margin: 0 0 0.5rem;
+      color: #2fffb3;
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>Vitaj na mojom streame!</h1>
+    <nav>
+      <a href="#o-mne">O mne</a>
+      <a href="#novinky">Novinky</a>
+      <a href="#stream">Stream</a>
+      <a href="#klipy">Klipy</a>
+      <a href="#galeria">Galéria</a>
+      <a href="#plan">Plán streamov</a>
+      <a href="#hry">Hry</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>  <section id="o-mne" data-aos="fade-up">
+    <h2>O mne</h2>
+    <p>Volám sa Andrej a na internete ma poznáte ako Xiu_Le. Som streamer a fanúšik Apex Legends, varenia a techniky!</p>
+  </section>  <section id="novinky" data-aos="fade-up">
+    <h2>Novinky</h2>
+    <div class="news-card">
+      <h3>27. máj 2025</h3>
+      <p>🎯 Konečne som dosiahol <strong>Diamond</strong> v Apex Legends! GG!</p>
+    </div>
+    <div class="news-card">
+      <h3>26. máj 2025</h3>
+      <p>⚡ Na stránku som pridal <strong>Discord sekciu</strong> a <strong>scrollovacie animácie</strong>! Skús to prejsť dolu!</p>
+    </div>
+  </section>  <section id="stream" data-aos="fade-up">
+    <h2>Live Stream</h2>
+    <a class="btn-twitch" href="https://twitch.tv/xiu_le" target="_blank">🎮 Sleduj ma na Twitchi</a>
+    <iframe src="https://player.twitch.tv/?channel=xiu_le&parent=xiu-le.github.io" height="300" width="100%" allowfullscreen></iframe>
+    <iframe src="https://www.twitch.tv/embed/xiu_le/chat?parent=xiu-le.github.io" height="200" width="100%"></iframe>
+  </section>  <section id="klipy" data-aos="fade-up">
+    <h2>Klipy</h2>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/cBmJ9Tsr7j8" allowfullscreen></iframe>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/2LKunJDQB3A" allowfullscreen></iframe>
+  </section>  <section id="galeria" data-aos="fade-up">
+    <h2>Galéria</h2>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Wattson_Portrait.png" alt="Moment 1">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Wattson_Portrait.png" alt="Moment 2">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/2a/Wattson_Portrait.png" alt="Moment 3">
+    </div>
+  </section>  <section id="plan" data-aos="fade-up">
+    <h2>Plán streamov</h2>
+    <table>
+      <tr><th>Deň</th><th>Hra</th><th>Čas</th></tr>
+      <tr><td>Pondelok</td><td>Apex Legends</td><td>18:00 - 21:00</td></tr>
+      <tr><td>Streda</td><td>Horror Night</td><td>20:00 - 22:00</td></tr>
+      <tr><td>Nedeľa</td><td>Just Chatting</td><td>17:00 - 19:00</td></tr>
+    </table>
+  </section>  <section id="hry" data-aos="fade-up">
+    <h2>Obľúbené hry</h2>
+    <ul>
+      <li>Apex Legends</li>
+      <li>The Last of Us</li>
+      <li>Hogwarts Legacy</li>
+      <li>No Man's Sky</li>
+    </ul>
+  </section>  <section id="kontakt" data-aos="fade-up">
+    <h2>Kontakt</h2>
+    <p>Napíš mi na: <a href="mailto:streamer@xiu.sk">streamer@xiu.sk</a></p>
+  </section>  <section data-aos="fade-up">
+    <div class="discord-box">
+      <h2>Pripoj sa na môj Discord!</h2>
+      <p>Staň sa súčasťou mojej hernej a streamerskej komunity. Diskusie, oznámenia, zábava – všetko na jednom mieste!</p>
+      <a href="https://discord.gg/EaPeWGC4" target="_blank">Pridaj sa</a>
+    </div>
+  </section>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init();
+  </script></body>
+</html>
