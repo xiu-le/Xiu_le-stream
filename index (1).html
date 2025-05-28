@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiu_Le Stream</title>
+    <link rel="icon" href="image/favicon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #000, #0b0033);
+            color: white;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+        }
+        .easter-egg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .easter-egg:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        #wattson-animation {
+            width: 250px;
+            margin: 20px auto;
+            display: none;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#o-mne">O mne</a>
+        <a href="#novinky">Novinky</a>
+        <a href="#stream">Stream</a>
+        <a href="#klipy">Klipy</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#plan">Plán streamov</a>
+        <a href="#hry">Hry</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="container">
+        <h1>Vitaj na mojom streame!</h1>
+
+        <section id="o-mne">
+            <h2>O mne</h2>
+            <p>Volám sa Xiu_Le a som nadšený streamer a hráč Apex Legends.</p>
+        </section>
+
+        <section id="novinky">
+            <h2>Novinky</h2>
+            <p>🎯 Dosiahnutý Diamond rank v Apex Legends! GG!</p>
+            <p>⚡ Pridaná Discord sekcia a scrollovacie animácie!</p>
+        </section>
+
+        <section id="easter-egg-trigger" class="easter-egg">
+            ⚡ Klikni pre Wattson prekvapenie!
+        </section>
+
+        <img id="wattson-animation" src="image/file_00000000e8d061f48e159bcdc607be3a.png" alt="Wattson tip" />
+    </div>
+
+    <audio id="zap-sound" src="sound/electric_zap.wav" preload="auto"></audio>
+
+    <script>
+        const trigger = document.getElementById('easter-egg-trigger');
+        const image = document.getElementById('wattson-animation');
+        const sound = document.getElementById('zap-sound');
+
+        trigger.addEventListener('click', () => {
+            image.style.display = 'block';
+            sound.play();
+        });
+    </script>
+</body>
+</html>
