@@ -1,128 +1,67 @@
-<!DOCTYPE html>
-<html lang="sk">
+<!DOCTYPE html><html lang="sk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Xiu_Le - Live Stream</title>
-  <link rel="icon" href="favicon.ico"/>
-
-  <!-- AOS animácie -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xiu_Le Stream</title>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Základný reset a font */
-    * { box-sizing: border-box; }
     body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+      color: white;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1a002b, #00091f);
-      color: #eee;
+      padding: 0;
     }
     header {
       text-align: center;
-      padding: 2rem 1rem;
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.7);
-      z-index: 10;
-    }
-    header h1 {
-      margin: 0 0 1rem;
-      font-size: 2rem;
+      padding: 1em 0;
     }
     nav a {
-      margin: 0 .5rem;
-      color: #2ee;
+      color: #00ffe5;
       text-decoration: none;
+      margin: 0 1em;
       font-weight: bold;
     }
     section {
+      padding: 2em;
       max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      margin: auto;
     }
-    h2 {
-      margin-top: 0;
-      font-size: 1.75rem;
-      color: #fff;
-    }
-    /* Twitch button */
-    .btn-twitch {
-      display: inline-block;
-      background: #9147ff;
-      color: #fff;
-      padding: .75rem 1.5rem;
-      border-radius: 2rem;
-      text-decoration: none;
-      margin-bottom: 1rem;
-    }
-    /* YouTube klipy */
-    .video-wrapper iframe {
-      width: 100%;
-      height: 315px;
-      border: none;
-      border-radius: .5rem;
-      margin-bottom: 1.5rem;
-    }
-    /* Galéria */
     .gallery {
       display: flex;
+      justify-content: space-around;
       flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
+      margin-bottom: 2em;
     }
     .gallery img {
-      max-width: calc(33% - 1rem);
-      border-radius: .5rem;
+      width: 100px;
+      margin: 1em;
     }
-    /* Easter-egg sekcia */
-    #easter-egg {
+    .surprise-button {
+      background-color: #444;
+      color: white;
+      padding: 1em;
+      border-radius: 10px;
       text-align: center;
-      margin: 4rem 1rem;
-      background: rgba(255,255,255,0.1);
-      padding: 2rem;
-      border-radius: .75rem;
-    }
-    #egg-btn {
-      padding: .75rem 1.5rem;
-      background: #666;
-      color: #fff;
-      border: none;
-      border-radius: .5rem;
+      margin: 2em auto;
+      width: fit-content;
+      font-size: 1.2em;
       cursor: pointer;
-      font-size: 1rem;
+      transition: 0.3s;
     }
-    /* Ostatné */
-    .news-card {
-      background: rgba(255,255,255,0.05);
-      padding: 1rem;
-      border-radius: .5rem;
-      margin-bottom: 1rem;
+    .surprise-button:hover {
+      background-color: #666;
     }
-    ul.games {
-      list-style: disc inside;
+    .hidden {
+      display: none;
     }
-    /* Kontakt + Discord button */
-    .discord-box {
-      background: rgba(255,255,255,0.05);
-      padding: 1rem;
-      border-radius: .5rem;
-      text-align: center;
-    }
-    .discord-box a {
-      display: inline-block;
-      margin-top: .5rem;
-      padding: .5rem 1rem;
-      background: #7289da;
-      color: #fff;
-      border-radius: .5rem;
-      text-decoration: none;
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Vitaj na mojom streame!</h1>
     <nav>
@@ -135,104 +74,61 @@
       <a href="#hry">Hry</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-  </header>
+  </header>  <section id="o-mne">
+    <h2>O mne</h2>
+    <p>Volám sa Xiu_Le a som nadšený streamer a hráč Apex Legends.</p>
+  </section>  <section id="novinky">
+    <h2>Novinky</h2>
+    <p>🎯 Dosiahnutý Diamond rank v Apex Legends! GG!</p>
+    <p>⚡️ Pridaná Discord sekcia a scrollovacie animácie!</p>
+  </section>  <section id="stream">
+    <h2>Live Stream</h2>
+    <a class="surprise-button" href="https://twitch.tv/xiu_le" target="_blank">🎮 Sleduj ma na Twitchi</a>
+    <iframe
+      src="https://player.twitch.tv/?channel=xiu_le&parent=xiu-le.github.io"
+      height="300"
+      width="100%"
+      allowfullscreen>
+    </iframe>
+  </section>  <section id="klipy">
+    <h2>Klipy</h2>
+    <iframe width="315" height="560" src="https://www.youtube.com/embed/cBmJ9Tsr7j8" allowfullscreen></iframe>
+    <iframe width="315" height="560" src="https://www.youtube.com/embed/2LKunJDQB3A" allowfullscreen></iframe>
+  </section>  <section id="galeria">
+    <h2>Galéria</h2>
+    <div class="gallery">
+      <img src="img/file_0000000004d061f482aedea7edc21cf2.png" alt="Tipy pre Wattson">
+      <img src="img/file_00000000ad3862438bbcd66be96945e1.png" alt="Apex Cover">
+      <img src="img/20250506_145120.jpg" alt="Apex Logo">
+    </div>
+  </section>  <div class="surprise-button" onclick="showSurprise()">
+    ⚡ Klikni pre Wattson prekvapenie!
+  </div>  <div id="wattson-surprise" class="hidden">
+    <img src="img/file_00000000e8d061f48e159bcdc607be3a.png" alt="Wattson Tip" style="max-width:100%;" />
+  </div><audio id="zapSound" src="sound/electric_zap.wav"></audio>
 
-  <main>
-    <!-- O mne -->
-    <section id="o-mne" data-aos="fade-up">
-      <h2>O mne</h2>
-      <p>Volám sa Xiu_Le a som nadšený streamer a hráč Apex Legends. Milujem technológie, vesmír, varenie aj únikové hry!</p>
-    </section>
-
-    <!-- Novinky -->
-    <section id="novinky" data-aos="fade-up">
-      <h2>Novinky</h2>
-      <div class="news-card">
-        <h3>2. február 2025</h3>
-        <p>🎯 Dosiahnutý Diamond rank v Apex Legends! GG!</p>
-      </div>
-      <div class="news-card">
-        <h3>26. máj 2025</h3>
-        <p>⚡ Pridaná Discord sekcia a scrollovacie animácie!</p>
-      </div>
-    </section>
-
-    <!-- Stream -->
-    <section id="stream" data-aos="fade-up">
-      <h2>Live Stream</h2>
-      <a class="btn-twitch" href="https://twitch.tv/xiu_le" target="_blank">🎮 Sleduj ma na Twitchi</a>
-      <div class="video-wrapper">
-        <iframe src="https://player.twitch.tv/?channel=xiu_le&parent=xiu-le.github.io" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <!-- Klipy -->
-    <section id="klipy" data-aos="zoom-in">
-      <h2>Klipy</h2>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/cBmJ9Tsr7j8" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/2LKunJDQB3A" allowfullscreen></iframe>
-      </div>
-    </section>
-
-    <!-- Galéria -->
-    <section id="galeria" data-aos="fade-up">
-      <h2>Galéria</h2>
-      <div class="gallery">
-        <img src="image/wattson_tip.png" alt="Tipy pre Wattson"/>
-        <img src="image/Apex_cover.png" alt="Apex Cover"/>
-        <img src="image/Apex_logo.png" alt="Apex Logo"/>
-      </div>
-    </section>
-
-    <!-- Easter-egg -->
-    <section id="easter-egg" data-aos="flip-left">
-      <button id="egg-btn">⚡ Klikni pre Wattson prekvapenie!</button>
-      <audio id="zap-sound" src="sound/electric_zap.wav"></audio>
-    </section>
-
-    <!-- Plán streamov -->
-    <section id="plan" data-aos="fade-up">
-      <h2>Plán streamov</h2>
-      <p>Pondelok – Piatok: 18:00 – 22:00<br/>
-         Sobota – Nedeľa: Voľný režim</p>
-    </section>
-
-    <!-- Hry -->
-    <section id="hry" data-aos="fade-up">
-      <h2>Hry, ktoré hrám</h2>
-      <ul class="games">
-        <li>Apex Legends</li>
-        <li>The Last of Us</li>
-        <li>Horizon</li>
-        <li>Rocket League</li>
-        <li>Death Stranding</li>
-      </ul>
-    </section>
-
-    <!-- Kontakt -->
-    <section id="kontakt" data-aos="fade-up">
-      <h2>Kontakt</h2>
-      <div class="discord-box">
-        <p>Pridaj sa do mojej komunity na Discorde!</p>
-        <a href="https://discord.gg/EaPeWGC4" target="_blank">Pridaj sa</a>
-      </div>
-      <p style="text-align:center; margin-top:1rem;">
-        Napíš mi na: <a href="mailto:streamer@xiu.sk">streamer@xiu.sk</a>
-      </p>
-    </section>
-  </main>
-
-  <script>
-    // AOS init
-    AOS.init();
-    // Easter-egg button
-    document.getElementById('egg-btn').addEventListener('click', () => {
-      const s = document.getElementById('zap-sound');
-      s.currentTime = 0;
-      s.play();
-    });
-  </script>
-
-</body>
+  <section id="plan">
+    <h2>Plán streamov</h2>
+    <p>Pondelok – Piatok: 18:00 – 22:00<br>Sobota – Nedeľa: Voľný režim</p>
+  </section>  <section id="hry">
+    <h2>Hry, ktoré hrám</h2>
+    <ul>
+      <li>Apex Legends</li>
+      <li>The Last of Us</li>
+      <li>Horizon</li>
+      <li>Rocket League</li>
+      <li>Death Stranding</li>
+    </ul>
+  </section>  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Napíš mi na: <a href="mailto:streamer@xiu.sk">streamer@xiu.sk</a></p>
+    <p><a href="https://discord.gg/EaPeWGC4" target="_blank">Pridaj sa na Discord</a></p>
+  </section>  <script>
+    function showSurprise() {
+      const surprise = document.getElementById('wattson-surprise');
+      const sound = document.getElementById('zapSound');
+      surprise.classList.remove('hidden');
+      sound.play();
+    }
+  </script></body>
 </html>
