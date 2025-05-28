@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xiu-le.github.io/Xiu_le-stream/sitemap.xml
