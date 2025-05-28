@@ -7,7 +7,42 @@
   <title>Xiu_Le - Stream</title>
   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4c/Lightning_bolt_font_awesome.svg">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
+  <style><!-- 🥚 Easter Egg: Ctrl + Alt + W -->
+<style>
+  #wattsonEgg {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    display: none;
+    width: 200px;
+    animation: zap 0.5s ease-in-out;
+    z-index: 9999;
+  }
+
+  @keyframes zap {
+    0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+    50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+</style>
+
+<img src="image/wattson_resized.png" alt="Wattson Tip" id="wattsonEgg">
+<audio id="zapSound" src="sound/electric_zap.mp3" preload="auto"></audio>
+
+<script>
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'w') {
+      const egg = document.getElementById('wattsonEgg');
+      const sound = document.getElementById('zapSound');
+      egg.style.display = 'block';
+      sound.currentTime = 0;
+      sound.play();
+      setTimeout(() => {
+        egg.style.display = 'none';
+      }, 2000);
+    }
+  });
+</script>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
