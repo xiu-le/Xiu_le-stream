@@ -115,6 +115,29 @@
       margin: 0 0 0.5rem;
       color: #2fffb3;
     }
+    .clips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.clips-container iframe {
+  width: 560px;
+  height: 315px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Pre mobilné zariadenia */
+@media (max-width: 768px) {
+  .clips-container iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -155,11 +178,12 @@
     <p>Streamujem Apex Legends, Just Chatting a ďalšie hry. Klikni a sleduj moju cestu naživo!</p>
   </section>
 
-  <section id="klipy" data-aos="zoom-in">
-    <h2>Klipy</h2>
-    <iframe width="315" height="560" src="https://www.youtube.com/embed/cBmJ9Tsr7j8" allowfullscreen></iframe>
-    <iframe width="315" height="560" src="https://www.youtube.com/embed/2LKunJDQB3A" allowfullscreen></iframe>
-  </section>
+  <h2>🎬 Klipy zo streamu a shorts</h2>
+<div class="clips-container">
+  <iframe src="https://www.youtube.com/embed/TVL_hCLx0ow" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/60f_cBiD5lI" frameborder="0" allowfullscreen></iframe>
+</div>
+<a class="back-btn" href="index.html">← Späť na hlavnú stránku</a>
 
   <section id="plan" data-aos="fade-up">
     <h2>Plán streamov</h2>
