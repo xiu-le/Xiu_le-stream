@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galéria | Xiu Le</title>
+  <style>
+    body {
+      background: #00063e;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 2rem;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+    a.back {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #2fffb3;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 Galéria</h1>
+  <div class="gallery">
+    <img src="image/file_0000000004d061f482aedea7edc21cf2.png" alt="Wattson">
+    <img src="image/file_00000000ad3862438bbcd66be96945e1.png" alt="Apex Cover">
+    <img src="image/20250506_145120.jpg" alt="Apex Logo">
+  </div>
+  <a class="back" href="index.html">← Späť na hlavnú stránku</a>
+</body>
+</html>
