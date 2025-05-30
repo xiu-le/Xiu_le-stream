@@ -1,3 +1,44 @@
+<!-- 🥚 Easter Egg 2.0 - Wattson ⚡ -->
+<img src="image/wattson_resized.png" alt="Wattson Tip" id="wattsonEgg" style="display:none; position: fixed; bottom: 100px; right: 30px; width: 200px; z-index: 9999; animation: zap 0.5s ease-in-out;" />
+<audio id="zapSound" src="sound/electric_zap.mp3" preload="auto"></audio>
+
+<style>
+  @keyframes zap {
+    0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+    50% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+
+  @keyframes flashBG {
+    0% { background-color: #2c003e; }
+    50% { background-color: #44007f; }
+    100% { background-color: #2c003e; }
+  }
+
+  body.flash-bg {
+    animation: flashBG 0.5s ease-in-out;
+  }
+</style>
+
+<script>
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'w') {
+      const egg = document.getElementById('wattsonEgg');
+      const sound = document.getElementById('zapSound');
+      const body = document.body;
+
+      egg.style.display = 'block';
+      sound.currentTime = 0;
+      sound.play();
+      body.classList.add('flash-bg');
+
+      setTimeout(() => {
+        egg.style.display = 'none';
+        body.classList.remove('flash-bg');
+      }, 2000);
+    }
+  });
+</script>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
