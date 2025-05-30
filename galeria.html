@@ -4,43 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galéria | Xiu Le</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
-      background: #00063e;
+      background: linear-gradient(135deg, #2c003e, #00063e);
       color: white;
-      font-family: sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
       text-align: center;
+    }
+    h1 {
+      padding: 2rem 1rem 1rem;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 2rem;
+      padding: 1rem 2rem 3rem;
     }
     .gallery img {
-      width: 200px;
+      width: 250px;
+      max-width: 90vw;
       border-radius: 10px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     .gallery img:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
-    a.back {
+    .back-link {
       display: inline-block;
-      margin-top: 1rem;
+      margin-bottom: 2rem;
       color: #2fffb3;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: 2px solid #2fffb3;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .back-link:hover {
+      background: #2fffb3;
+      color: #00063e;
     }
   </style>
 </head>
 <body>
   <h1>📸 Galéria</h1>
+
   <div class="gallery">
     <img src="image/file_0000000004d061f482aedea7edc21cf2.png" alt="Wattson">
     <img src="image/file_00000000ad3862438bbcd66be96945e1.png" alt="Apex Cover">
     <img src="image/20250506_145120.jpg" alt="Apex Logo">
   </div>
-  <a class="back" href="index.html">← Späť na hlavnú stránku</a>
+
+  <a class="back-link" href="index.html">← Späť na hlavnú stránku</a>
 </body>
 </html>
