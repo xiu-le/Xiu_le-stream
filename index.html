@@ -190,6 +190,33 @@
 <section id="feedback" style="padding: 2rem; text-align: center;">
   <h2>📣 Pošli nám feedback</h2>
   <form action="https://formspree.io/f/xyzjgzvw" method="POST" style="max-width: 500px; margin: 0 auto;">
+   <p id="thankYou" style="display: none; color: #7eff9c; font-weight: bold; text-align: center; margin-top: 1rem;">
+  ✅ Ďakujeme za správu!
+</p>
+
+<script>
+  const form = document.querySelector("form");
+  const thankYou = document.getElementById("thankYou");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        thankYou.style.display = "block";
+        setTimeout(() => thankYou.style.display = "none", 4000);
+      }
+    });
+  });
+</script>
     <label for="email">Tvoj e-mail:</label><br>
     <input type="email" name="email" id="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
 
