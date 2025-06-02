@@ -2,6 +2,21 @@
 </html>
 <!DOCTYPE html><html lang="sk">
 <head>
+  <style>
+  body {
+    background-image: url("image/background.png"); /* Uprav podľa názvu súboru ak je iný */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white; /* Ak potrebuješ svetlý text pre tmavé pozadie */
+  }
+
+  /* Pridáme aj trochu tieňa pre lepšiu čitateľnosť textu */
+  h1, h2, h3, p, a, li, label {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  }
+  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Oficiálna stránka streamera Xiu_Le – Apex Legends, príbehové hry, komunita a zábava. Pridaj sa na stream!" />
@@ -11,119 +26,68 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body>
-</body>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #2c003e, #00063e);
-      color: #fff;
-      overflow-x: hidden;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      text-align: center;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    nav a {
-      color: #2fffb3;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-      text-align: center;
-    }
-    h2 {
-      margin-bottom: 1rem;
-    }
-    .btn-twitch {
-      background: #9146FF;
-      padding: 12px 25px;
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-size: 1.1rem;
-      display: inline-block;
-      margin: 10px auto 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-    iframe {
-      max-width: 100%;
-      border: none;
-      border-radius: 10px;
-    }
-    .gallery img {
-      width: 100px;
-      margin: 10px;
-      border-radius: 10px;
-    }
-    .discord-box {
-      background: rgba(0,0,0,0.2);
-      margin: 30px auto;
-      max-width: 500px;
-      padding: 25px;
-      border-radius: 15px;
-    }
-    .discord-box a {
-      background: #5865F2;
-      padding: 12px 25px;
-      border-radius: 25px;
-      display: inline-block;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      margin-top: 15px;
-    }
-    .news-card {
-      background: rgba(255,255,255,0.1);
-      padding: 1rem 1.5rem;
-      border-radius: 15px;
-      max-width: 600px;
-      margin: 1rem auto;
-      text-align: left;
-    }
-    .news-card h3 {
-      margin: 0 0 0.5rem;
-      color: #2fffb3;
-    }
-    .clips-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.clips-container iframe {
-  width: 560px;
-  height: 315px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Pre mobilné zariadenia */
-@media (max-width: 768px) {
-  .clips-container iframe {
-    width: 100%;
-    height: auto;
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url("image/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    overflow-x: hidden;
   }
-}
 
-  </style>
-</head>
-<body>
+  /* Tieň pre lepšiu čitateľnosť */
+  h1, h2, h3, p, a, li, label {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    color: #2fffbb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .btn-twitch {
+    background: #9146FF;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin: 10px auto 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+</style>
   <header data-aos="fade-down">
     <h1>Vitaj na mojom streame!</h1>
     <nav>
