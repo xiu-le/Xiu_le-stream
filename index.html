@@ -20,17 +20,78 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <style>
-  body
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <body>
+    <!-- ⚡ Wattson Fence Loading Animation -->
+<div class="fence-loader">
+  <div class="node"></div>
+  <div class="spark spark-1"></div>
+  <div class="spark spark-2"></div>
+</div>
 
-  gtag('config', 'G-XXXXXXXXXX');
+<style>
+  .fence-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    z-index: 9999;
+  }
+
+  .node {
+    width: 20px;
+    height: 20px;
+    background: #9146FF;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1.2s infinite;
+  }
+
+  .spark {
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, #9146FF, #00f0ff);
+    transform-origin: left center;
+    animation: zap 1.2s infinite;
+  }
+
+  .spark-1 {
+    transform: rotate(45deg);
+  }
+
+  .spark-2 {
+    transform: rotate(-45deg);
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.5; }
+  }
+
+  @keyframes zap {
+    0%, 100% { width: 60px; opacity: 1; }
+    50% { width: 90px; opacity: 0.6; }
+  }
+</style>
+
+<script>
+  // Skryť loader po načítaní stránky
+  window.addEventListener("load", function () {
+    const loader = document.querySelector(".fence-loader");
+    if (loader) loader.style.display = "none";
+  });
 </script>
-<!-- End Google Analytics -->
+</body>
+<style>
+  body
+  
   {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
